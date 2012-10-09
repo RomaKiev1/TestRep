@@ -1,0 +1,304 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+</p>
+
+
+        <script type="text/javascript">
+//            $(document).ready(function () {
+//                GetJSonData();
+//            });
+
+//            var chart;
+//            var chartData = [];
+
+
+
+//            //amacharts function
+//            function DrawGraph() {
+//               // generateChartData();
+
+//                //  alert(chartData[0].hits);
+
+//                // SERIAL CHART    
+//                chart = new AmCharts.AmSerialChart();
+//                chart.pathToImages = "../Content/images/images1/";
+//                chart.zoomOutButton = {
+//                    backgroundColor: '#000000',
+//                    backgroundAlpha: 0.15
+//                };
+//                chart.dataProvider = chartData;
+//                chart.categoryField = "date";
+
+//                // listen for "dataUpdated" event (fired when chart is inited) and call zoomChart method when it happens
+//                chart.addListener("dataUpdated", zoomChart);
+
+//                // AXES
+//                // category                
+//                var categoryAxis = chart.categoryAxis;
+//                categoryAxis.parseDates = true; // as our data is date-based, we set parseDates to true
+//                categoryAxis.minPeriod = "DD"; // our data is daily, so we set minPeriod to DD
+//                categoryAxis.dashLength = 2;
+//                categoryAxis.gridAlpha = 0.15;
+//                categoryAxis.axisColor = "#DADADA";
+
+//                // first value axis (on the left)
+//                var valueAxis1 = new AmCharts.ValueAxis();
+//                valueAxis1.axisColor = "#FF6600";
+//                valueAxis1.axisThickness = 2;
+//                valueAxis1.gridAlpha = 0;
+//                chart.addValueAxis(valueAxis1);
+
+//                // second value axis (on the right) 
+//                var valueAxis2 = new AmCharts.ValueAxis();
+//                valueAxis2.position = "right"; // this line makes the axis to appear on the right
+//                valueAxis2.axisColor = "#FCD202";
+//                valueAxis2.gridAlpha = 0;
+//                valueAxis2.axisThickness = 2;
+//                chart.addValueAxis(valueAxis2);
+
+//                // third value axis (on the left, detached)
+////                valueAxis3 = new AmCharts.ValueAxis();
+////                valueAxis3.offset = 50; // this line makes the axis to appear detached from plot area
+////                valueAxis3.gridAlpha = 0;
+////                valueAxis3.axisColor = "#B0DE09";
+////                valueAxis3.axisThickness = 2;
+////                chart.addValueAxis(valueAxis3);
+
+//                // GRAPHS
+//                // first graph
+//                var graph1 = new AmCharts.AmGraph();
+//                graph1.valueAxis = valueAxis1; // we have to indicate which value axis should be used
+//                graph1.title = "red line";
+//                graph1.valueField = "visits";
+//                graph1.bullet = "round";
+//                graph1.hideBulletsCount = 30;
+//                graph1.type = "smoothedLine";
+//                chart.addGraph(graph1);
+
+//                // second graph                
+////                var graph2 = new AmCharts.AmGraph();
+////                graph2.valueAxis = valueAxis2; // we have to indicate which value axis should be used
+////                graph2.title = "yellow line";
+////                graph2.valueField = "hits";
+////                graph2.bullet = "square";
+////                graph2.hideBulletsCount = 30;
+////                chart.addGraph(graph2);
+
+//                // third graph
+//                var graph3 = new AmCharts.AmGraph();
+//                graph3.valueAxis = valueAxis2; // we have to indicate which value axis should be used
+//                graph3.valueField = "views";
+//                graph3.title = "green line";
+//                graph3.bullet = "round"; //"triangleUp";
+//                graph3.hideBulletsCount = 30;
+//                graph3.type = "smoothedLine";
+//                graph3.lineColor = "#d1655d"
+//                chart.addGraph(graph3);
+
+//                // CURSOR
+//                var chartCursor = new AmCharts.ChartCursor();
+//                chartCursor.cursorPosition = "mouse";
+//                chart.addChartCursor(chartCursor);
+
+//                // SCROLLBAR
+//                var chartScrollbar = new AmCharts.ChartScrollbar();
+//                chart.addChartScrollbar(chartScrollbar);
+
+//                // LEGEND
+//                var legend = new AmCharts.AmLegend();
+//                legend.marginLeft = 110;
+//                chart.addLegend(legend);
+
+//                // WRITE
+//                chart.write("chartdiv");
+//            }
+
+//            //
+
+//            // generate some random data, quite different range
+//            function generateChartData() {
+//                var firstDate = new Date();
+//                firstDate.setDate(firstDate.getDate() - 50);
+
+//                for (var i = 0; i < 50; i++) {
+//                    var newDate = new Date(firstDate);
+//                    newDate.setDate(newDate.getDate() + i);
+
+//                    var visits = Math.round(Math.random() * 40) + 100;
+//                    var hits = Math.round(Math.random() * 80) + 500;
+//                    var views = Math.round(Math.random() * 6000);
+
+//                    chartData.push({
+//                        date: newDate,
+//                        visits: visits,
+//                        hits: hits,
+//                        views: views
+//                    });
+//                }
+//            }
+
+//            function GetJSonData() {
+//                urlDataJSON = '/Home/DataForGraph';
+//                $.getJSON(urlDataJSON, {}, function (data) {
+//                    $.each(data, function (entryindex, entry) {
+
+//                        var date = new Date(entry['date']);
+//                        var visits = Math.round(Math.random() * 40) + 100;
+//                        var hits = entry['hits'];
+//                        var views = entry['views'];
+
+//                        chartData.push({
+//                            date: date,
+//                            visits: visits,
+//                            hits: hits,
+//                            views: views
+//                        });
+//                    });
+//                    alert(chartData[5].date + " " + chartData[5].visits + " " + chartData[5].hits + " " + chartData[5].views);
+//                    DrawGraph();
+//                });
+//               
+//            }
+
+//            // this method is called when chart is first inited as we listen for "dataUpdated" event
+//            function zoomChart() {
+//                // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
+//                chart.zoomToIndexes(10, 20);
+            //            }
+
+
+            var chart;
+
+            var chartData = [{
+                country: "USA",
+                visits: 4025,
+                europe: 500
+            }, {
+                country: "China",
+                visits: 1882,
+                europe: 545
+            }, {
+                country: "Japan",
+                visits: 1809,
+                europe: 453
+            }, {
+                country: "Germany",
+                visits: 1322,
+                europe: 543
+            }, {
+                country: "UK",
+                visits: 1122,
+                europe: 543
+            }, {
+                country: "France",
+                visits: 1114,
+                europe: 432
+            }, {
+                country: "India",
+                visits: 984,
+                europe: 233
+            }, {
+                country: "Spain",
+                visits: 711,
+                europe: 345
+            }, {
+                country: "Netherlands",
+                visits: 665,
+                europe: 432
+            }, {
+                country: "Russia",
+                visits: 580,
+                europe: 342
+            }, {
+                country: "South Korea",
+                visits: 443,
+                europe: 134
+            }, {
+                country: "Canada",
+                visits: 441,
+                europe: 344
+            }, {
+                country: "Brazil",
+                visits: 395,
+                europe: 424
+            }, {
+                country: "Italy",
+                visits: 386,
+                europe: 432
+            }, {
+                country: "Australia",
+                visits: 384,
+                europe: 234
+            }, {
+                country: "Taiwan",
+                visits: 338,
+                europe: 232
+            }, {
+                country: "Poland",
+                visits: 328,
+                europe: 123
+            }];
+
+
+            AmCharts.ready(function () {
+                // SERIAL CHART
+                chart = new AmCharts.AmSerialChart();
+                chart.dataProvider = chartData;
+                chart.categoryField = "country";
+                chart.depth3D = 20;
+                chart.angle = 30;
+
+                // AXES
+                // category
+                var categoryAxis = chart.categoryAxis;
+//                categoryAxis.labelRotation = 90;
+//                categoryAxis.dashLength = 5;
+//                categoryAxis.gridPosition = "start";
+                  categoryAxis.gridAlpha = 0.1;
+                  categoryAxis.axisAlpha = 0;
+                  categoryAxis.gridPosition = "start";
+
+                // value
+                var valueAxis = new AmCharts.ValueAxis();
+//                valueAxis.title = "Visitors";
+//                valueAxis.dashLength = 5;
+//                chart.addValueAxis(valueAxis);
+                valueAxis.stackType = "regular";
+                valueAxis.gridAlpha = 0.1;
+                valueAxis.axisAlpha = 0;
+                chart.addValueAxis(valueAxis);
+
+                // GRAPH            
+                var graph = new AmCharts.AmGraph();
+                graph.valueField = "visits";
+                graph.colorField = "#DDDDDD";
+                graph.balloonText = "[[category]]: [[value]]";
+                graph.type = "column";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 1;
+                graph.labelText = "[[value]]";
+                chart.addGraph(graph);
+
+                graph = new AmCharts.AmGraph();
+                graph.valueField = "europe";
+                graph.colorField = "#8A0CCF";
+                graph.balloonText = "[[category]]: [[value]]";
+                graph.type = "column";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 1;
+                graph.labelText = "[[value]]";
+                chart.addGraph(graph);
+
+                // WRITE
+                chart.write("chartdiv");
+            });
+         
+           
+        </script>
+
+     <div id="chartdiv" style="width: 1500px; height: 400px;"></div>
