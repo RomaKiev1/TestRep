@@ -14,7 +14,10 @@ namespace AmaChartsSample.Controllers
 
         //
         // GET: /Account/LogOn
-
+        /// <summary>
+        /// /////////////////////
+        /// </summary>
+        /// <returns></returns>
         public ActionResult LogOn()
         {
             return View();
