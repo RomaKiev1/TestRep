@@ -11,9 +11,7 @@ namespace AmaChartsSample.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
-            //изменения
             return View();
-            ////////////////////////
         }
 
         public ActionResult About()
