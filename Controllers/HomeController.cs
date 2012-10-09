@@ -13,7 +13,7 @@ namespace AmaChartsSample.Controllers
             ViewBag.Message = "Welcome to ASP.NET MVC!";
             //изменения
             return View();
-            ////////////////////////
+            ////////////////////////555
         }
 
         public ActionResult About()
